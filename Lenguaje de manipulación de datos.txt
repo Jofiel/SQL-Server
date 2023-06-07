@@ -1,0 +1,11 @@
+ Server Name: produccion\sql2012
+ Nombre de la base de datos: BPSelanusa
+ Login: jtenorio
+ Password: T3n0r10
+ Password: Ross2015
+ 01:35 p.m. 20/09/2022
+ Password nuevo: Gauss1777 
+ 05:12 p. m. 25/05/2023
+
+ 
+ El lenguaje de manipulación de Datos (DML) permite realizar consultas, modificaciones y eliminación de datos dentro de una base de datos.

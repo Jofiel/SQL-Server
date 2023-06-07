@@ -1,0 +1,25 @@
+SELECT [BD GN].[Sub-Subentidad Operativa], [BD GN].[ID Pat], [BD GN].Patrocinador, [BD GN].[ID Cte], [BD GN].Cliente, [BD GN].[Tipo de Cliente], [BD GN].Estatus, [BD GN].[Producto Base], [BD GN].Descripción, [BD GN].Catálogo, [BD GN].Origen, [BD GN].Línea, [BD GN].Sublinea, [BD GN].Estado, [BD GN].[Unidad de Medida], [BD GN].Presentación, [BD GN].Mes, [BD GN].Año, [BD GN].[Ejecutivo Actual], [BD GN].Unidad, [BD GN].Venta, [BD GN].[Patrocinador Unificado], [BD GN].[Cliente Unificado], [BD GN].TIMHIL, [Pronostico GN 2023].Gerente, [Pronostico GN 2023].Encargado, [Pronostico GN 2023].Seo, [Pronostico GN 2023].[ID Sub-Sub], [Pronostico GN 2023].[ID Pat], [Pronostico GN 2023].Patrocinador, [Pronostico GN 2023].[ID Cte], [Pronostico GN 2023].[ID Ejecutivo], [Pronostico GN 2023].Ejecutivo, [Pronostico GN 2023].Estado, [Pronostico GN 2023].Estatus, [Pronostico GN 2023].Enero, [Pronostico GN 2023].Febrero, [Pronostico GN 2023].Marzo, [Pronostico GN 2023].Abril, [Pronostico GN 2023].Mayo, [Pronostico GN 2023].Junio, [Pronostico GN 2023].Julio, [Pronostico GN 2023].Agosto, [Pronostico GN 2023].Septiembre, [Pronostico GN 2023].Octubre, [Pronostico GN 2023].Noviembre, [Pronostico GN 2023].Diciembre, [Pronostico GN 2023].Anual  // Tenemos que declarar todos los campos de ambas tablas que queremos traer.
+
+FROM [BD GN]   // [BD GN] es la base de todos los registros que queremos recuperar, es la primera tabla (izquierda).
+
+LEFT JOIN [Pronostico GN 2023] ON [BD GN].Cliente = [Pronostico GN 2023].Cliente // [Pronostico GN 2023] es la base cuyos campos 														traera solo si coinciden.
+
+														La clausula ON para ver con que campo
+														lo vamos a amarrar.
+
+WHERE ((([BD GN].[Ejecutivo Actual]) In ("LOPEZ PALMA HILDA ALEJANDRA","VENTAS GERENCIA"))); //Aplicamos un filtro
+																	sobre la base General
+
+
+
+
+Notas importantes de LEFT JOIN:
+
+Use una operación LEFT JOIN para crear un combinación externa izquierda. En las combinaciones externas izquierdas se incluyen todos los registros de la primera tabla (izquierda), incluso si no existen valores coincidentes para registros en la segunda tabla (derecha).
+
+Las operaciones LEFT JOIN o RIGHT JOIN se pueden anidar dentro de una operación INNER JOIN, pero una operación INNER JOIN no se puede anidar dentro de una operación LEFT JOIN o RIGHT JOIN. Vea la discusión sobre anidamiento en el tema INNER JOIN para conocer cómo se anidan las combinaciones dentro de otras combinaciones.
+
+Se pueden vincular varias cláusulas ON. Vea la discusión sobre la vinculación de cláusulas en el tema INNER JOIN para conocer el procedimiento.
+
+Se puede usar cualquier comparacion relacional: "=", "<", ">", "<=", ">=" o "<>" 
+

@@ -1,0 +1,29 @@
+Campos de la base "BD":
+
+Prod Base
+Id Producto/Codigo
+Descripción
+Color
+Linea
+Marca
+Origen
+Producto de Línea
+Estatus
+Mes
+Año
+Venta
+Unidades
+
+Campos de la base "CLS" con la cual vamos a cruzar:
+
+Codigo de Producción
+
+*******************************************************************************************************************************************************************
+Query:
+
+
+SELECT BD.[Prod Base], BD.[Id Producto/Codigo], BD.Descripción, BD.Color, BD.Linea, BD.Marca, BD.Origen, BD.[Producto de Línea], BD.Estatus, BD.Mes, BD.Año, BD.Venta, BD.Unidades, CLS.[Codigo de Producción]
+
+FROM BD
+
+INNER JOIN [CLS] ON BD.[Id Producto/Codigo] = CLS.[Codigo de Producción];
