@@ -1,0 +1,21 @@
+
+1. Comenzamos haciendo un origen de datos (ODBC) desde windows.
+2. Le damos en agregar (debe ser desde su driver) en nuestro caso "SQL Native Client 11.0" 
+3. Le damos un nombre cualquiera, le pasamos el servidor en nuestro caso "DESKTOP-BH8PMF9" lo encontramos en 
+	SQL la primera base, anti-click y en la parte superior encontramos el nombre del servidor.
+4. Usamos la autenticación de SQL Server mediante un Id.
+5. Podemos pasar una base de datos en la opción "Change the default database to:" en nuestro caso seleccionamos centro Médico
+6. Debemos tener en Acces --> BVA --> herramientas --> Referencias, debemos de tener habilitadas:
+	1.Visual Bassic For Applications x
+	2.Microsoft Access 14.0 Object Library x 
+	3.OLE Automation x 
+	4.Microsoft Office 14.0 Access database engine Object x 
+	5.Microsoft ActiveX
+	6.Microsoft Forms 2.0
+	7.Microsoft ADO Ext. 2.6
+
+7. Creamos en Access una consulta y nos vamos a Paso a traves, en esa misma hoja nos vamos a "Hoja de propiedades"
+8. Por default nos aparece ODBC porque una consulta de paso a traves solo funciona con ese tipo de cadenas de conexión.
+    Le damos en los tres puntos que aparecen al final y seleccionamos la pestaña "Origen de datos de equipo" y selecionamos 
+    el origen de datos que acabamos de hacer, nos logeamos y nos pide si deseamos guardar la contraseña de sesión le decimos que no.
+
